@@ -100,6 +100,7 @@ random_bg_btns.forEach((btn) => {
 });
 // =====================================================================================================
 //* Bullets section
+//all bullets buttons
 const allBullets = document.querySelectorAll(".nav-bullets .bullet");
 
 function scrollToSomewhere(element) {
@@ -113,6 +114,46 @@ function scrollToSomewhere(element) {
   });
 }
 scrollToSomewhere(allBullets);
+
+//* Show hide Bullets
+let showHideBulletButtons = document.querySelectorAll(
+  ".show-hide-bullets span"
+);
+
+//main bullets container
+let bulletsContainer = document.querySelector(".nav-bullets");
+
+//get hide-show button item from localstorage
+let bulletsLocalItem = localStorage.getItem("bulletsOption");
+
+if (bulletsLocalItem !== null) {
+  showHideBulletButtons.forEach((button) => {
+    button.classList.remove("active");
+    if (bulletsLocalItem === "block") {
+      document
+        .querySelector(".show-hide-bullets .show")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".show-hide-bullets .hide")
+        .classList.add("active");
+    }
+  });
+}
+
+showHideBulletButtons.forEach((Button) => {
+  Button.addEventListener("click", function (e) {
+    if (e.target.dataset.display == "show") {
+      bulletsContainer.style.display = "block";
+      localStorage.setItem("bulletsOption", "block");
+    } else {
+      bulletsContainer.style.display = "none";
+      localStorage.setItem("bulletsOption", "none");
+    }
+    handleActive(e);
+  });
+});
+
 // ========================================================================================================
 //* Handle active state
 

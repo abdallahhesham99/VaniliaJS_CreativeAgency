@@ -94,7 +94,8 @@ p {
   color: #666;
 }
 /* Start .colors-list */
-.settings-box .option-box .colors-list {
+.settings-box .option-box div:first-of-type,
+.settings-box .option-box ul:first-of-type {
   margin-top: 12px;
 }
 .settings-box .option-box .colors-list li {
@@ -127,10 +128,7 @@ p {
 /* End Color-list  */
 /* ================= */
 /* Start Random Background */
-.settings-box .random-bg {
-  margin-top: 12px;
-}
-.settings-box .random-bg-btn {
+.settings-box .option-box span {
   display: inline-block;
   width: 50px;
   padding: 5px 0;
@@ -144,7 +142,7 @@ p {
   cursor: pointer;
 }
 
-.settings-box .random-bg-btn.active {
+.settings-box .option-box span.active {
   opacity: 1;
 }
 /* End Random Background */
