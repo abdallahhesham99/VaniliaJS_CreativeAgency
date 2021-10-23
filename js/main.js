@@ -154,6 +154,17 @@ showHideBulletButtons.forEach((Button) => {
   });
 });
 
+//*Reset Options settings
+
+let resetOptionButton = document.querySelector(
+  ".settings-box .reset-options-button "
+);
+resetOptionButton.addEventListener("click", function () {
+  localStorage.clear();
+  // localStorage.removeItem('colorOption');
+  // localStorage.removeItem('bullets'); ..............
+  window.location.reload();
+});
 // ========================================================================================================
 //* Handle active state
 

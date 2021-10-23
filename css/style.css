@@ -28,6 +28,10 @@ p {
   font-size: 14px;
   line-height: 1.6;
 }
+input,
+textarea {
+  display: block;
+}
 /* ============================================================================================= */
 /** ==========================Common Classes================================================ */
 .container {
@@ -61,6 +65,19 @@ p {
   background-color: #fff;
   transition: 300ms;
   border: 1px solid #eee;
+}
+.settings-box .reset-options-button {
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 8px 6px;
+  width: 223px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+.settings-box .reset-options-button:hover {
+  background-color: var(--mainColor);
 }
 .settings-box.open {
   left: 0;
@@ -537,3 +554,69 @@ p {
 }
 /**===============================End Testimonials Section======================================*/
 /* ========================================================================================== */
+.contact-us {
+  min-height: 600px;
+  background-image: url(../images/PngItem_968186.png);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.contact-us .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+}
+.contact-us .container {
+  position: relative;
+  z-index: 2;
+}
+.contact-us-content form {
+  max-width: 800px;
+  margin: auto;
+}
+.contact-us-content form .left,
+.contact-us-content form .right {
+  width: 49%;
+}
+.contact-us-content form input,
+.contact-us-content form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #f1f1f169;
+  padding: 8px 10px;
+  margin: 10px 0;
+}
+.contact-us-content form input:focus,
+.contact-us-content form textarea:focus {
+  outline: 1px solid var(--mainColor);
+}
+.contact-us-content form .left {
+  float: left;
+}
+.contact-us-content form .right {
+  float: right;
+}
+
+.contact-us-content form input,
+.contact-us-content button {
+  height: 40px;
+}
+.contact-us-content form textarea {
+  height: 140px;
+}
+.contact-us-content form button[type="submit"] {
+  border: 0;
+  color: #fff;
+  background-color: var(--mainColor);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-us-content form input:focus::placeholder,
+.contact-us-content form textarea:focus::placeholder {
+  opacity: 0;
+  transition: 300ms;
+}
