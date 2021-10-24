@@ -242,7 +242,7 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 95%;
 }
 .home-section-content h1 {
   margin-top: 0;
@@ -258,12 +258,26 @@ textarea {
   width: 60%;
   margin: 0 auto;
 }
+@media (max-width: 575px) {
+  .home-section-content h1 {
+    font-size: 34px;
+  }
+  .home-section-content p {
+    width: 95%;
+  }
+}
+@media (min-width: 576px) and (max-width: 873px) {
+  .home-section-content p {
+    width: 95%;
+  }
+}
 /*End home-section*/
 /* ================================================================================ */
 /**===============================About Section======================================*/
 .about-us-content {
   display: flex;
 }
+
 .about-us-info {
   flex: 1;
   margin: auto 0;
@@ -278,7 +292,16 @@ textarea {
   text-align: center;
 }
 .about-us-img img {
-  width: 430px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .about-us-content {
+    display: block;
+    text-align: center;
+  }
+  .about-us-info p {
+    width: auto;
+  }
 }
 /**===============================End About Section======================================*/
 /* ================================================================================ */
@@ -294,11 +317,22 @@ textarea {
   background-color: #fff;
   border-radius: 5px;
 }
+@media (max-width: 767px) {
+  .our-skills-content .skill-box {
+    display: block;
+  }
+}
 .our-skills-content .skill-box .skill-name {
   font-weight: bold;
   width: 140px;
   text-align: center;
   line-height: 30px;
+}
+@media (max-width: 767px) {
+  .our-skills-content .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .our-skills-content .skill-box .skill-progress {
   width: 85%;
@@ -308,6 +342,11 @@ textarea {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .our-skills-content .skill-box .skill-progress {
+    width: 100%;
+  }
+}
 .our-skills-content .skill-box .skill-progress span {
   position: absolute;
   background-color: var(--mainColor);
@@ -315,18 +354,25 @@ textarea {
   height: 100%;
   transition: 0.5s all;
 }
+@media (max-width: 575px) {
+}
 /**===============================End Skills Section======================================*/
 /* ================================================================================ */
 /**===============================Gallery Section======================================*/
-
+@media (max-width: 780px) {
+  .gallery-content {
+    text-align: center;
+  }
+}
 .gallery-content img {
-  width: 223px;
+  width: 208px;
   padding: 3px;
   background-color: #f6f6f6;
   border: 1px solid #ccc;
   margin: 5px;
   cursor: pointer;
 }
+
 .popup-overlay {
   position: fixed;
   left: 0;
@@ -347,7 +393,6 @@ textarea {
   z-index: 10;
 }
 .popup-box img {
-  max-width: 100%;
   max-width: 500px;
 }
 .popup-box .close-button {
@@ -395,6 +440,14 @@ textarea {
   width: calc(50% - 25px);
   margin-bottom: 40px;
 }
+
+@media (max-width: 767px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .timeline .timeline-content .left {
   float: left;
 }
@@ -409,6 +462,12 @@ textarea {
   background-color: #fff;
   border: 3px solid var(--mainColor);
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .timeline .timeline-content .left::before,
+  .timeline .timeline-content .right::before {
+    display: none;
+  }
 }
 .timeline .timeline-content .right {
   float: right;
@@ -435,7 +494,12 @@ textarea {
   border-style: solid;
   border-width: 10px;
 }
-
+@media (max-width: 767px) {
+  .timeline .timeline-content .left .content::before,
+  .timeline .timeline-content .right .content::before {
+    display: none;
+  }
+}
 .timeline .timeline-content .left .content::before {
   border-color: transparent transparent transparent #fff;
   right: -20px;
@@ -449,9 +513,6 @@ textarea {
 
 /* ========================================================================================== */
 /**===============================Start Features Section======================================*/
-
-.our-features {
-}
 .our-features-content {
   display: flex;
   flex-wrap: wrap;
@@ -460,6 +521,16 @@ textarea {
   width: 33.33%;
   text-align: center;
   margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .our-features-content .feat-box {
+    width: 100%;
+  }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .our-features-content .feat-box {
+    width: 50%;
+  }
 }
 .our-features-content .feat-box img {
   width: 40%;
@@ -519,17 +590,33 @@ textarea {
   z-index: 2;
   display: flex;
 }
+@media (max-width: 991px) {
+  .testimonials-content {
+    display: block;
+  }
+}
 .testimonials-content .ts-box {
   background-color: #fff;
   padding: 20px;
   width: 31%;
   /* width: calc(98% / 3);  .ts:not(:last-of-type){margin-right: 1%}*/
 }
+@media (max-width: 991px) {
+  .testimonials-content .ts-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .testimonials-content .ts-box:not(:last-of-type) {
   margin-right: 1.33%;
 }
 .testimonials-content .ts-box > p {
   font-style: italic;
+}
+@media (max-width: 991px) {
+  .testimonials-content .ts-box > p {
+    font-size: 13px;
+  }
 }
 .testimonials-content .ts-box .person-info {
   display: flex;
@@ -620,3 +707,37 @@ textarea {
   opacity: 0;
   transition: 300ms;
 }
+/**===============================End Contact us Section======================================*/
+/* ========================================================================================== */
+/**===============================Start Footer Section======================================*/
+
+/**===============================End Footer Section======================================*/
+/* ========================================================================================== */
+/**===============================Start Grid System======================================*/
+
+@media (min-width: 576px) {
+  /*Small devices (phones)*/
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  /*Medium devices (tablet)*/
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  /*Desktop devices ()*/
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  /*Large devices ()*/
+  .container {
+    max-width: 1140px;
+  }
+}
+/**===============================End Grid System======================================*/
+/* ========================================================================================== */
